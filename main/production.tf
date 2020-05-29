@@ -10,8 +10,3 @@ resource "null_resource" "production" {
   }
 }
 
-resource "null_resource" "production1" {
-  provisioner "local-exec" {
-    command = "echo ${random_id.production.hex}"
-  }
-}
