@@ -9,9 +9,3 @@ resource "null_resource" "integration" {
     command = "echo ${random_id.integration.hex}"
   }
 }
-
-resource "null_resource" "integration1" {
-  provisioner "local-exec" {
-    command = "echo ${random_id.integration.hex}"
-  }
-}
