@@ -9,9 +9,3 @@ resource "null_resource" "test" {
     command = "echo ${random_id.test.hex}"
   }
 }
-
-resource "null_resource" "test1" {
-  provisioner "local-exec" {
-    command = "echo ${random_id.test.hex}"
-  }
-}
