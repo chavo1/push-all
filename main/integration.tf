@@ -9,4 +9,3 @@ resource "null_resource" "integration" {
     command = "echo ${random_id.integration.hex}"
   }
 }
-
