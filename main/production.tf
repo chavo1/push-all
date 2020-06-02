@@ -1,17 +1,11 @@
-resource "random_id" "production" {
+resource "random_id" "integration" {
   keepers = {}
 
   byte_length = 9
 }
 
-resource "null_resource" "production" {
+resource "null_resource" "integration" {
   provisioner "local-exec" {
-    command = "echo ${random_id.production.hex}"
-  }
-}
-
-resource "null_resource" "production1" {
-  provisioner "local-exec" {
-    command = "echo ${random_id.production.hex}"
+    command = "echo ${random_id.integration.hex}"
   }
 }
